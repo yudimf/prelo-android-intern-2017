@@ -58,7 +58,7 @@ public class LoginActivity extends AppCompatActivity {
             @Override
             public void onResponse(Call<SuccessResponse> call, Response<SuccessResponse> response) {
                 if (response.isSuccessful()){
-                    Log.d("Sukses",response.body().getData().getEmail());
+                    Log.d("Sukses",response.body().getData().getToken());
                     startActivity(new Intent(getApplicationContext(),LovelistActivity.class));
                     finish();
                 }
